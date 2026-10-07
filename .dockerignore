@@ -1,0 +1,32 @@
+# Dependencies and build output are recreated inside the image
+node_modules
+.next
+out
+dist
+coverage
+
+# Local env files: never bake secrets into the image
+.env*
+!.env.example
+
+# VCS, CI and editor files
+.git
+.gitignore
+.github
+.vscode
+.idea
+.DS_Store
+
+# Docker files themselves
+Dockerfile*
+.dockerignore
+docker-compose*.yml
+compose*.yml
+
+# Logs and misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.tsbuildinfo
+README.md
